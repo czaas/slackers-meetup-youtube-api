@@ -34,10 +34,10 @@ $(document).ready(function(){
 			type = 'video',
 			videoCaption = 'any',
 			videoCategoryId = 24,
-			q = 'teaser',
+			q = 'movie teaser',
 			videoEmbeddable = true;
 
-		var request = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=' + maxResults + '&type=' + type + '&videoCaption=' + videoCaption + '&videoCategoryId=' + videoCategoryId + '&videoEmbeddable=' + videoEmbeddable + '&key=' + myKey;
+		var request = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + q + '&maxResults=' + maxResults + '&type=' + type + '&videoCaption=' + videoCaption + '&videoCategoryId=' + videoCategoryId + '&videoEmbeddable=' + videoEmbeddable + '&key=' + myKey;
 
 		$.ajax({
 			url: request,
